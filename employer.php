@@ -1,17 +1,13 @@
 <?php
 session_start();
 $var = $_SESSION['username']; 
-/*if($_SESSION['username']=='')
-{
-  header("Location: ../BlueCircle/loggedout.html");
-} */
+
 if(isset($_POST["submit"])) 
 
 {   
    //if ( $err == '') // no error
   {
-  //  $var1='deb';
- //   $fileHandle = fopen('../Form_' .$var1. '.txt', 'a') OR die ("Can't open file\n");
+
     $cname = $_POST['cname'];
     $industry = $_POST['industry']; 
     $location = $_POST['location'];  
@@ -63,7 +59,7 @@ if(isset($_POST["submit"]))
          }
 
         mysqli_close($con);  
-        header ("Location: ../BlueCircle/employerhome.php");
+        header ("Location: ../Circle/employerhome.php");
 }   
 }
 
